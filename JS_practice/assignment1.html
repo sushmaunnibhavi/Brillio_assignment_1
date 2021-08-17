@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x = 4;
+var y = 5;
+var z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+if (new Date().getHours() < 20) {
+  document.getElementById("demo").innerHTML = "Good day!";
+}
+else{
+    document.getElementById("demo").innerHTML = "Bad day!";
+}
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Mon";
+    break;
+  case 2:
+    day = "Tue";
+    break;
+  case 3:
+    day = "Wed";
+    break;
+  case 4:
+    day = "Thu";
+    break;
+  case 5:
+    day = "Fri";
+    break;
+  case  6:
+    day = "Sat";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+const cars = ["B", "V", "S", "F", "F", "A"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+const person = {fname:"J", lname:"D", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("demo").innerHTML = txt;
+var hello;
+
+hello = function() {
+  return "Hello World!";
+}
+
+document.getElementById("demo").innerHTML = hello();
+document.getElementById("demo").innerHTML = Boolean(1 > 9);
+// Create an object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML = "The car type is " + car.type;
+let carName1 = "Volvo XC60"; // Double quotes
+let carName2 = 'Volvo XC60'; // Single quotes
+
+document.getElementById("demo").innerHTML =
+carName1 + " " + carName2; 
+
+</script>
+
+</body>
+</html>
