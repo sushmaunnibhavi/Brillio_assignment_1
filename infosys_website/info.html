@@ -41,6 +41,40 @@ form.example button {
 form.example button:hover {
   background: #0b7dda;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 </style>
 <body >
     <div class="container1" style="background-image: url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/banner-images/iki-cloud-radar-2021-lead.jpg');background-repeat: no-repeat; background-position: 0px; background-size: 1300px;">
@@ -69,10 +103,10 @@ form.example button:hover {
     <div class="container1" style="background-image: url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/responsive/newdesign/digital-capabilities-lead-mob.png');background-repeat: no-repeat; background-position: 0px; background-size: 1300px;background-color: rgb(200, 202, 83); color: white;">
             <section> 
           <article class="container"> 
-             <div class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><h2 style="font-family: Arial, Helvetica, sans-serif;">Digital Core Capabilities</h2><p class="fullpage-desc white-color"> 
+             <div class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><h2 style="font-family: Arial, Helvetica, sans-serif;">Digital Core Capabilities</h2><p > 
                          <em>Build vital capabilities to deliver digital outcomes.</em></p><p class="mb20 mb-xs-10 mt50 mt-xs-0 animateThird"> <br><br>
-                         <a >Explore</a></p><div class="row hidden-xs"><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20"><p class="fullpage-second-title">Case studies</p><h3 class="fullpage-second-desc white-color">Pfizer's journey towards increased productivity, powered by AI</h3><p class="fullpage-second-more text-uppercase black-color mt20"> 
-                               <a >View</a></p></div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p class="fullpage-second-title">&#160;</p><h3 class="fullpage-second-desc white-color">A government that contributes to the joy of parenting</h3><p class="fullpage-second-more text-uppercase black-color mt20"> 
+                         <a >Explore</a></p><div class="row hidden-xs"><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20"><p >Case studies</p><h3 >Pfizer's journey towards increased productivity, powered by AI</h3><p > 
+                               <a >View</a></p></div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p >&#160;</p><h3>A government that contributes to the joy of parenting</h3><p > 
                                <a >View</a></p></div></div></div></div></div> 
  </article> </section>
     </div>
@@ -81,25 +115,77 @@ form.example button:hover {
         <section> 
       <article class="container"> 
          <div class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><h2 style="font-family: Arial, Helvetica, sans-serif;">Digital Operating Models</h2><p class="fullpage-desc white-color"> 
-                     <em>Adopt accelerators to evolve your way of working.</em></p><p class="mb20 mb-xs-10 mt50 mt-xs-0 animateThird"> <br><br>
-                     <a >Explore</a></p><div class="row hidden-xs"><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20"><p class="fullpage-second-title">Case studies</p><h3 class="fullpage-second-desc white-color">Powering Radial’s digital transformation journey</h3><p class="fullpage-second-more text-uppercase black-color mt20"> 
-                           <a >View</a></p></div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p class="fullpage-second-title">&#160;</p><h3 class="fullpage-second-desc white-color">Accelerating Citizens Energy Group’s Customer Experience journey</h3><p class="fullpage-second-more text-uppercase black-color mt20"> 
+                     <em>Adopt accelerators to evolve your way of working.</em></p><p> <br><br>
+                     <a >Explore</a></p><div class="row hidden-xs"><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20"><p >Case studies</p><h3 >Powering Radial’s digital transformation journey</h3><p > 
+                           <a >View</a></p></div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p >&#160;</p><h3>Accelerating Citizens Energy Group’s Customer Experience journey</h3><p> 
                            <a >View</a></p></div></div></div></div></div> 
 </article> </section>
 </div>
 
-<div class="container1" style="background-image: url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/responsive/newdesign/digital-operating-models-lead-mob.png');background-repeat: no-repeat; background-position: 0px; background-size: 1300px;background-color: rgb(130, 9, 134); color: white;">
+<div class="container1" style="background-image: url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/responsive/newdesign/talent-transformations-lead-mob.png');background-repeat: no-repeat; background-position: 0px; background-size: 1300px;background-color: rgb(130, 9, 134); color: white;">
     <section> 
   <article class="container"> 
-     <div class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><h2 style="font-family: Arial, Helvetica, sans-serif;">Digital Operating Models</h2><p class="fullpage-desc white-color"> 
-                 <em>Adopt accelerators to evolve your way of working.</em></p><p class="mb20 mb-xs-10 mt50 mt-xs-0 animateThird"> <br><br>
-                 <a >Explore</a></p><div class="row hidden-xs"><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20"><p class="fullpage-second-title">Case studies</p><h3 class="fullpage-second-desc white-color">Powering Radial’s digital transformation journey</h3><p class="fullpage-second-more text-uppercase black-color mt20"> 
-                       <a >View</a></p></div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p class="fullpage-second-title">&#160;</p><h3 class="fullpage-second-desc white-color">Accelerating Citizens Energy Group’s Customer Experience journey</h3><p class="fullpage-second-more text-uppercase black-color mt20"> 
+     <div class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><h2 style="font-family: Arial, Helvetica, sans-serif;">Empowering Talent Transformations</h2><p> 
+                 <em>Embrace the talent revolution to remain relevant in the future.</em></p><p class="mb20 mb-xs-10 mt50 mt-xs-0 animateThird"> <br><br>
+                 <a >Explore</a></p><div class="row hidden-xs"><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20"><p >Case studies</p><h3 class="fullpage-second-desc white-color">Improving productivity with digital field workforce management</h3><p> 
+                       <a >View</a></p></div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p>&#160;</p><h3 >Developing talent for our digital future</h3><p > 
                        <a >View</a></p></div></div></div></div></div> 
 </article> </section>
 </div>
 
+<div class="container2">
+  <h2 style="text-align: center; margin-top: 50px;"><b>The Next</b></h2>
+  <p style="text-align: center; margin-top: 20px;"><em>We bring you powerful advantages to navigate your digital transformation</em></p>
+</div>
     
+<div class="container1" style="height: 800px;">
+
+    <div class="row" style="align-items: center; padding-left: 300px;">
+      <div class="column">
+        
+        <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/experience.jpg">
+        <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/insight.jpg"">
+        <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/innovate.jpg">
+      </div>
+      <div class="column">
+        <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/accelerate.jpg">
+        <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/assure.jpg">
+      </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-lg-3" style="padding-left: 70px;">
+      <a><b>Service offerings</b></a>
+    </div>
+    <div class="col-lg-3">
+      <a><b>Explore industries</b></a>
+    </div>
+    <div class="col-lg-3">
+      <a><b>Our platforms</b></a>
+    </div>
+    <div class="col-lg-3">
+      <a><b>Navigate your next</b></a>
+    </div>
+  </div>
+
+<div class="container1" style="background-image: url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/banner-images/infosys-unveils-product-lead.jpg'); height: 300px;">
+
+        <div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row"> 
+            
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12"><p>Press release</p>
+                <h3 >Infosys Unveils Product-Centric Delivery Model by using Agile and DevOps to Empower and Accelerate Business Outcomes</h3>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-xs-20 mt50"> <a  >Read More</a> </div>
+            </div>
+    </div>
+  </div>
+
+</div>
+<div>
+  
+</div>
 </body>
  
 </html>
