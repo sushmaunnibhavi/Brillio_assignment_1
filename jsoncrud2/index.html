@@ -59,10 +59,9 @@
             }
 
             var table = document.createElement('table');
-            table.setAttribute('id', 'booksTable');     // Seet table id.
+            table.setAttribute('id', 'booksTable');    
 
-            var tr = table.insertRow(-1);               // Create a row (for header).
-
+            var tr = table.insertRow(-1);               
             for (var h = 0; h < this.col.length; h++) {
                 // Add table header.
                 var th = document.createElement('th');
@@ -94,30 +93,30 @@
                 tr.appendChild(this.td);
                 var btSave = document.createElement('input');
 
-                btSave.setAttribute('type', 'button');      // SET ATTRIBUTES.
+                btSave.setAttribute('type', 'button');     
                 btSave.setAttribute('value', 'Save');
                 btSave.setAttribute('id', 'Save' + i);
                 btSave.setAttribute('style', 'display:none;');
-                btSave.setAttribute('onclick', 'crudApp.Save(this)');       // ADD THE BUTTON's 'onclick' EVENT.
+                btSave.setAttribute('onclick', 'crudApp.Save(this)');     
                 this.td.appendChild(btSave);
 
                 tr.appendChild(this.td);
                 var btUpdate = document.createElement('input');
 
-                btUpdate.setAttribute('type', 'button');    // SET ATTRIBUTES.
+                btUpdate.setAttribute('type', 'button');   
                 btUpdate.setAttribute('value', 'Update');
                 btUpdate.setAttribute('id', 'Edit' + i);
                 btUpdate.setAttribute('style', 'background-color:#44CCEB;');
-                btUpdate.setAttribute('onclick', 'crudApp.Update(this)');   // ADD THE BUTTON's 'onclick' EVENT.
+                btUpdate.setAttribute('onclick', 'crudApp.Update(this)');   
                 this.td.appendChild(btUpdate);
 
                 this.td = document.createElement('th');
                 tr.appendChild(this.td);
                 var btDelete = document.createElement('input');
-                btDelete.setAttribute('type', 'button');    // SET INPUT ATTRIBUTE.
+                btDelete.setAttribute('type', 'button');   
                 btDelete.setAttribute('value', 'Delete');
                 btDelete.setAttribute('style', 'background-color:#ED5650;');
-                btDelete.setAttribute('onclick', 'crudApp.Delete(this)');   // ADD THE BUTTON's 'onclick' EVENT.
+                btDelete.setAttribute('onclick', 'crudApp.Delete(this)');   
                 this.td.appendChild(btDelete);
             }
 
@@ -194,7 +193,7 @@
             for (i = 1; i < 4; i++) {
                 if (i == 2) {
                     var td = tab.getElementsByTagName("td")[i];
-                    var ele = document.createElement('select');      // DROPDOWN LIST.
+                    var ele = document.createElement('select');    
                     ele.innerHTML = '<option value="' + td.innerText + '">' + td.innerText + '</option>';
                     for (k = 0; k < this.category.length; k++) {
                         ele.innerHTML = ele.innerHTML +
@@ -205,7 +204,7 @@
                 }
                 else {
                     var td = tab.getElementsByTagName("td")[i];
-                    var ele = document.createElement('input');      // TEXTBOX.
+                    var ele = document.createElement('input');     
                     ele.setAttribute('type', 'text');
                     ele.setAttribute('value', td.innerText);
                     td.innerText = '';
@@ -225,8 +224,8 @@
 
         this.Delete = function (oButton) {
             var activeRow = oButton.parentNode.parentNode.rowIndex;
-            this.myBooks.splice((activeRow - 1), 1);    // DELETE THE ACTIVE ROW.
-            this.createTable();                         // REFRESH THE TABLE.
+            this.myBooks.splice((activeRow - 1), 1);   
+            this.createTable();                        
         };
 
         this.Save = function (oButton) {
@@ -263,9 +262,9 @@
             }
             obj[this.col[0]] = this.myBooks.length + 1;     
 
-            if (Object.keys(obj).length > 0) {      // CHECK IF OBJECT IS NOT EMPTY.
-                this.myBooks.push(obj);             // PUSH (ADD) DATA TO THE JSON ARRAY.
-                this.createTable();                 // REFRESH THE TABLE.
+            if (Object.keys(obj).length > 0) {     
+                this.myBooks.push(obj);             
+                this.createTable();                
             }
         }
 
